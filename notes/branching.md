@@ -20,7 +20,7 @@ git checkout <nameofbranch>
 gco <nameofbranch>
 ```
 
-To check all of the branches:
+To list all of the branches:
 
 ```
 git branch
@@ -38,4 +38,32 @@ While on develop:
 
 ```
 git merge master
+```
+
+You should get: Already up-to-date.
+
+## Push to heroku
+
+From master! (After merging all of the finished branches)
+
+```
+git push heroku master
+```
+
+To look at your app in heroku:
+
+```
+heroku open
+```
+
+The first time you push you need to add the postgresql addon.
+
+```
+heroku addons:create heroku-postgresql --app safe-spire-7671
+```
+
+And if you have any changes to your database, you need to migrate the database on heroku:
+
+```
+heroku run rake db:migrate
 ```
