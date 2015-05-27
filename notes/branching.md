@@ -32,3 +32,10 @@ After working on develop, you want to move the changes to master.
 
 To merge develop to master:
 
+First on develop, we check that there is nothing on master that we don't have:
+
+While on develop:
+
+```
+git merge master
+```
