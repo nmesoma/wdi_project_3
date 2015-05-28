@@ -3,9 +3,9 @@
 one:
   address: MyString
   latitude: 1.5
-  longtitude: 1.5
+  Longitude: 1.5
 
 two:
   address: MyString
   latitude: 1.5
-  longtitude: 1.5
+  Longitude: 1.5

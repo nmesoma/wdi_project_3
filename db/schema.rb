@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150528145426) do
   create_table "locations", force: :cascade do |t|
     t.string   "address"
     t.float    "latitude"
-    t.float    "longtitude"
+    t.float    "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
