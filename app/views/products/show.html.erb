@@ -2,7 +2,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <%= image_tag(@product.image, style: "height: 100px;") %>
 </p>
 
 <p>
@@ -21,8 +21,8 @@
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @product.category %>
+  <strong>Rating:</strong>
+  <%= @product.rating %>
 </p>
 
 <p>
@@ -37,7 +37,7 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @product.url %>
+  <%= link_to 'Buy', @product.url, target: :_blank %>
 </p>
 <ul>
   <% @reviews.each  do |review| %>
