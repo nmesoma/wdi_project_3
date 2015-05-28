@@ -10,3 +10,11 @@ In the brand page if we clik on the name of the brand it will take us to the pag
   </li>
   <% end %>
 </ul>
+To get a link of reviews and brands on the home or product page that if click will take me to the page that list all the reviews or brands pages put this code inside index.html.erb page of product
+
+<h1>Listing Products</h1>
+<%= link_to("reviews", reviews_path) %>
+<%= link_to("brands", brands_path) %>
+
+
+
