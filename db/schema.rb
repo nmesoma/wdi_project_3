@@ -46,15 +46,13 @@ ActiveRecord::Schema.define(version: 20150528145426) do
     t.text     "name"
     t.text     "description"
     t.text     "brand"
-    t.text     "category"
     t.integer  "price_retail"
     t.string   "currency_iso"
     t.text     "url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "review_id"
-    t.integer  "user_id"
     t.integer  "brand_id"
+    t.integer  "rating"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -62,10 +60,9 @@ ActiveRecord::Schema.define(version: 20150528145426) do
     t.integer  "product_id"
     t.integer  "brand_id"
     t.text     "review_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.text     "product_image"
     t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
