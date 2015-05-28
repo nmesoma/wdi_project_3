@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
-<%= link_to("reviews", reviews_path) %>
-<%= link_to("brands", brands_path) %>
 
 <table>
   <thead>
@@ -22,17 +20,17 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.image %></td>
-        <td><%= product.name %></td>
+        <td><%= image_tag(product.image, style: "height: 50px") %></td>
+        <td><%= link_to product.name, product %></td>
         <td><%= product.description %></td>
         <td><%= product.brand %></td>
-        <td><%= product.category %></td>
+        <td><%= product.rating %></td>
         <td><%= product.price_retail %></td>
         <td><%= product.currency_iso %></td>
-        <td><%= product.url %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Buy', product.url, target: :_blank %></td>
       </tr>
     <% end %>
   </tbody>
