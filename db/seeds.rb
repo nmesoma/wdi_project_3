@@ -8,7 +8,7 @@
 
 
 require 'HTTParty'
-require 'pry'
+# require 'pry'
 
 response = HTTParty.get("https://www.popshops.com/v3/products.json", query: { account: ENV['POPSHOPS_API_KEY'], catalog: ENV['POPSHOPS_CATALOG'], results_per_page: 100})
 
@@ -16,14 +16,13 @@ response['results']['products']['product'].each do |product|
   
   Product.create!(
     description: product['offers']['offer'].first['description'],
-    image: ,
-    name: ,
-    price_retail: ,
-    currency_iso:,
-    brand:,
-    description:, 
-    category:,
-    url:
+    image: "",
+    name: "",
+    price_retail:"" ,
+    currency_iso:"",
+    brand:"", 
+    category:"",
+    url:""
 
   )
 
@@ -62,7 +61,7 @@ response['results']['products']['product'].each do |product|
   #   }
 
 
-  puts product
+  # puts product
 end
 
 # binding.pry

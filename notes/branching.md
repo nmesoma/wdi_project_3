@@ -67,3 +67,6 @@ And if you have any changes to your database, you need to migrate the database o
 ```
 heroku run rake db:migrate
 ```
+
+<!-- mine for API
+do rake db seed to see if the api works -->
