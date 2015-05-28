@@ -1,0 +1,12 @@
+In the brand page if we clik on the name of the brand it will take us to the page were all the products under that brand are listed so the @product.each do code  below loops over all the products and spit them out with the arguments passed eg product name, description etc -->
+<ul>
+  <% @products.each  do |product| %>
+  <li> 
+    <p class="user-name"></p> 
+    <p><%= product.name %></p>
+    <p><%= product.description  %></p>
+    <p><%= product.image %></p>
+    <p><%= product.price_retail %></p>  
+  </li>
+  <% end %>
+</ul>

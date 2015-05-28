@@ -9,13 +9,15 @@
   <strong>Logo:</strong>
   <%= @brand.logo %>
 </p>
+
 <ul>
   <% @products.each  do |product| %>
   <li> 
     <p class="user-name"></p> 
     <p><%= product.name %></p>
-    <p><%= review.description %></p>
-    <p><%= review.description %></p>
+    <p><%= product.description  %></p>
+    <p><%= product.image %></p>
+    <p><%= product.price_retail %></p>  
   </li>
   <% end %>
 </ul>
